@@ -15,18 +15,18 @@
             <div class="row">
                 <a href="#" class="logo">Logo</a>
                 <ul class="header-nav">
-                    <li class="nav-list"><a href="#" class="nav-link">Home</a></li>
-                    <li class="nav-list"><a href="#" class="nav-link">News</a></li>
-                    <li class="nav-list"><a href="#" class="nav-link">About</a></li>
+                    <li class="nav-list"><a href="{% url 'home_page' %}" class="nav-link">Home</a></li>
+                    <li class="nav-list"><a href="{% url 'news_page' %}" class="nav-link">News</a></li>
+                    <li class="nav-list"><a href="{% url 'news_page' %}" class="nav-link">About</a></li>
                 </ul>
                 <button id="burger-button" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></button>
             </div>
         </div>
         <div id="menuList" class="container" style="display: none;">
             <ul class="mobile-menu">
-                <li class="menu-list"><a href="#" class="nav-link">Home</a></li>
-                <li class="menu-list"><a href="#" class="nav-link">News</a></li>
-                <li class="menu-list"><a href="#" class="nav-link">About</a></li>
+                <li class="menu-list"><a href="{% url 'home_page' %}" class="nav-link">Home</a></li>
+                <li class="menu-list"><a href="{% url 'news_page' %}" class="nav-link">News</a></li>
+                <li class="menu-list"><a href="{% url 'news_page' %}" class="nav-link">About</a></li>
             </ul>
         </div>
     </header>
@@ -65,6 +65,6 @@
     </footer>
 
 
-    <script src="./js/script.js"></script>
+    <script defer src = "{%static 'js/script.js'%}"></script>
 </body>
 </html>

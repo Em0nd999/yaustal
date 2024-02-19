@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+{% load static %}
+<link rel="stylesheet" href = "{% static 'css/style.css'%}">
     <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -9,15 +11,22 @@
     <body>
         <header class="header">
             <div class="container">
-                <div class="row" id="menuList" class="container" style="display: none;">
+                <div class="row">
                     <a href="#" class="logo">Logo</a>
-                    <ul class="mobile-menu">
-                        <li class="menu-list"><a href="#" class="nav-link">Home</a></li>
-                        <li class="menu-list"><a href="#" class="nav-link">News</a></li>
-                        <li class="menu-list"><a href="#" class="nav-link">About</a></li>
+                    <ul class="header-nav">
+                        <li class="nav-list"><a href="{% url 'home_page' %}" class="nav-link">Home</a></li>
+                        <li class="nav-list"><a href="{% url 'news_page' %}" class="nav-link">News</a></li>
+                        <li class="nav-list"><a href="{% url 'news_page' %}" class="nav-link">About</a></li>
                     </ul>
                     <button id="burger-button" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></button>
                 </div>
+            </div>
+            <div id="menuList" class="container" style="display: none;">
+                <ul class="mobile-menu">
+                    <li class="menu-list"><a href="{% url 'home_page' %}" class="nav-link">Home</a></li>
+                    <li class="menu-list"><a href="{% url 'news_page' %}" class="nav-link">News</a></li>
+                    <li class="menu-list"><a href="{% url 'news_page' %}" class="nav-link">About</a></li>
+                </ul>
             </div>
         </header>
     
@@ -69,6 +78,6 @@
             </div>
         </footer>
     
-        <script src="./js/script.js"></script>
+        <script defer src = "{%static 'js/script.js'%}"></script>
     </body>
     </html>
