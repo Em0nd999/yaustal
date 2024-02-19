@@ -13,7 +13,7 @@
     <header class="header">
         <div class="container">
             <div class="row">
-                <a href="#" class="logo">Logo</a>
+                <a href="{% url 'news_page' %}" class="logo">Very interesting news</a>
                 <ul class="header-nav">
                     <li class="nav-list"><a href="{% url 'home_page' %}" class="nav-link">Home</a></li>
                     <li class="nav-list"><a href="{% url 'news_page' %}" class="nav-link">News</a></li>
@@ -35,8 +35,8 @@
         <section class="home">
             <div class="container">
                 <h1 class="home-title">Wellcome to my Application</h1>
-                <p class="home-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex architecto voluptatum enim inventore iste placeat quae soluta libero sit perspiciatis, rem adipisci quo tempore, illum laudantium, doloremque quia possimus illo.</p>
-                <a href="#" class="button-outline-light">Last news</a>
+                <p class="home-description">Vsem hi, и да да я сдеал это</p>
+                <a href="{% url 'news_page' %}" class="button-outline-light">Last news</a>
             </div>
         </section>
         <section class="last-news">
